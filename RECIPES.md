@@ -33,3 +33,17 @@ A AutoHotkey script from @aienabled to drive the desk to stand and sit mode by p
 ```
 
 These are shortcut files on the desktop but it's not necessary and could be simple python calls.
+
+### VBScript
+
+A VBScript to drive the desk to stand and sit mode by running shortcuts:
+
+```
+Set WshShell = CreateObject("WScript.Shell")
+command = "cmd /c idasen-controller --sit"
+ReturnCode = WshShell.Run(command, 0, True)
+```
+Set WshShell = CreateObject("WScript.Shell")
+command = "cmd /c idasen-controller --stand"
+ReturnCode = WshShell.Run(command, 0, True)
+```
